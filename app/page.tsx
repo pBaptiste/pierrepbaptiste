@@ -5,6 +5,7 @@ import ContactForm from './components/ContactForm';
 import { projects } from '@/projects';
 import { SiFrontendmentor } from 'react-icons/si'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
+import EmailButton from './components/EmailButton';
 
 let techStack = [
   { name: "HTML", years: 2 },
@@ -43,11 +44,15 @@ export default function Home() {
               className="text-center md:text-start text-secondary-text text-base md:text-[1.125rem] font-medium leading-[1.625rem] md:leading-7 max-w-[343px] md:max-w-[445px] mb-6 md:mb-[34px] xl:mb-[66px]">
               I am a U.S.-based front-end developer with a passion for creating web applications that prioritize accessibility and enhances user experience.
             </p>
-            <a
-              href="#contact"
-              className="border-b-2 border-accent hover:text-accent transition duration-[400] pb-[10px] uppercase text-base font-bold leading-[1.625rem] tracking-[2.286px]"
-            >contact me
-            </a>
+            <div className='flex gap-4 uppercase text-sm font-bold leading-[1.625rem] tracking-[2.286px]'>
+              <EmailButton />
+              or
+              <a
+                href="#contact"
+                className="border-b-2 border-accent hover:text-accent transition duration-[400] pb-[10px] uppercase text-base font-bold leading-[1.625rem] tracking-[2.286px]"
+              >contact me
+              </a>
+            </div>
 
             <div className='hidden -z-10 md:block absolute w-[200px] h-[400px] xl:w-[300px] xl:h-[466px] right-0 top-[-100px]'>
               <Image src='/images/web-developer.svg' alt='Web Developer Icon' fill className='object-contain' />
