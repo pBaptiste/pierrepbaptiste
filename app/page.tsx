@@ -55,7 +55,7 @@ export default function Home() {
             </div>
 
             <div className='hidden -z-10 md:block absolute w-[200px] h-[400px] xl:w-[300px] xl:h-[466px] right-0 top-[-100px]'>
-              <Image src='/images/web-developer.svg' alt='Web Developer Icon' fill className='object-contain' />
+              <Image src='/images/web-developer.svg' alt='Web Developer Icon' fill className='object-contain' priority={true}/>
             </div>
           </section>
 

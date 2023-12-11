@@ -26,7 +26,9 @@ const Project = ({ imgSrc, imgAlt, name, stacks, projectUrl, codeUrl }: ProjectP
                 </div>
 
                 {/* <Image src={imgSrc} alt={imgAlt} fill className="w-full h-full object-cover z-10" /> */}
-                <Iframe url={projectUrl}
+                <Iframe 
+                    title={name + ' app'}
+                    url={projectUrl}
                     scrolling='no'
                     className="absolute w-full h-full object-cover z-10" />
             </div>

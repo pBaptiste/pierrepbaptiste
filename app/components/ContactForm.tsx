@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { sendEmail } from '../actions'
+import { Toaster, toast } from 'sonner'
 
 const ContactForm = () => {
 
@@ -36,7 +37,8 @@ const ContactForm = () => {
     const response = await sendEmail(form);
 
     if (response.message === 'Email sent successfully.') {
-      alert('Email sent successfully.');
+      //alert('Email sent successfully.');
+      toast.success('Email sent successfully.');
       setForm({
         name: '',
         email: '',
@@ -162,6 +164,8 @@ const ContactForm = () => {
           className="border-b-2 border-accent hover:text-accent transition duration-[400] pb-[10px] uppercase text-base font-bold leading-[1.625rem] tracking-[2.286px] max-w-fit self-end"
           type="submit">Send Message</button>
       </form>
+
+      <Toaster />
 
       <div
         className="absolute bottom-[95px] md:bottom-[20px] xl:bottom-[50px] left-[-350px] xl:left-[-210px]">
